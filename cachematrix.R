@@ -1,3 +1,5 @@
+## Program will create a cache of a matrix and store the inverse 
+
 makeCacheMatrix <- function(m = matrix()){
     inv <- NULL
     set <- function (m1){
@@ -12,9 +14,13 @@ makeCacheMatrix <- function(m = matrix()){
          getinverse = getinverse)
 }
 
+## Program will solve for the inverse of the matrix and if there is a null 
+## matrix return the cache inverse.
 cacheSolve <- function(m, ...){
     inv <- m$getinv()
     
+    ## Checks to see whether the result is null.  If the value here is not equal 
+    ## to null the inverse will be returned
     if(!is.null(inv)){
         message("Getting cached data")
         return(inv)
